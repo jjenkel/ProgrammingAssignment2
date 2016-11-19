@@ -31,7 +31,8 @@ cacheSolve <- function(x, ...) {
     if(!is.null(invs)) {
         message("getting cached inverse")
         return(invs)
-        }
+    }
+    message("getting new inverse")
     mtx <- x$get()
     invs <- solve(mtx,...)
     x$setinvs(invs)

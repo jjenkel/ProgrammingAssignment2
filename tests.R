@@ -7,6 +7,15 @@ z1 <- matrix(c(4,2,7,6),nrow=2,ncol=2)
 z11 <- makeCacheMatrix(z1)
 cacheSolve(z11)
 
+class(z11)
+class(cacheSolve(z11))
+
+tmp <- matrix(c(3,3.2,3.5,3.6),nrow=2,ncol=2)
+z11$set(tmp)
+z11$get()
+z11$getinvs()
+
+
 # check for identity matrix
 z111 <- z1%*%cacheSolve(z11)
 z111
